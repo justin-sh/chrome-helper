@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 400px;
+        }
+
+        .title {
+            margin: 0 auto;
+            width: 170px;
+        }
+
+        #cookieMgr {
+            margin-top: 20px;
+            border-top: 1px solid;
+        }
+
+        .fun {
+            margin-top: 7px;
+            border-bottom: 1px solid;
+        }
+
+        .last {
+            border-bottom: none;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="title"><h2>Justin Helper</h2></div>
+</div>
+
+<div id="jifen" class="fun">
+    积分(productCode):<input id="productCode" size="11" type="text">
+    <button>Trigger Start</button>
+</div>
+<div id="exchange" class="fun">
+    积分秒杀
+    <button>Trigger Start</button><br/>
+    receiverName:<input id="receiverName"><br/>
+    mobile:<input id="mobile"><br/>
+    address:<input id="address"><br/>
+    postCode:<input id="postCode">
+</div>
+<div id="p2p" class="fun">
+    稳赢-安e贷
+    <button>Trigger Start</button>
+    <br/>
+    Available amount<input class="amount" type="number" value="20000" size="6" max="200000" style="width: 70px">
+    <input class="pageLimit" type="number" value="20" size="4" max="100" maxlength="4" style="width: 40px"><br/>
+    tradePassword:<input type="password" id="tradePasswd" value="20" size="10" max="100" maxlength="10" style="width: 70px">
+</div>
+<div id="utils" class="fun last">
+    test
+    <button>Trigger Start</button>
+    <button id="randomBtn">Random IP</button>
+</div>
+
+<div id="cookieMgr">
+    <!--<h3>Cookies Manager</h3>-->
+    <div class="title"><h3>Cookies Manager</h3></div>
+
+    <div id="filter_div">
+        Filter: <input id="filter" type="text" value="lufax.com">
+        <button>x</button>
+    </div>
+    <br/>
+
+    <div id="summary_div">
+        Showing <span id="filter_count"></span> of <span id="total_count"></span> cookie domains.
+        <span id="delete_all_button"></span>
+    </div>
+    <br/>
+    <table id="cookies">
+        <tr class="header">
+            <th>Name</th>
+            <th>#Cookies</th>
+        </tr>
+    </table>
+</div>
+<script src="js/jquery-1.7.1.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/manager.js"></script>
+</body>
+</html>
