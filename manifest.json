@@ -1,6 +1,6 @@
 {
     "name": "Justin Helper Pro",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Justin Helper Pro",
     "permissions": [
         "tabs",
@@ -9,19 +9,28 @@
         "webRequest",
         "webRequestBlocking",
         "notifications",
+        "contextMenus",
         "*://*/*"
     ],
     "browser_action": {
-        "default_icon": "images/lufax.png",
+        "default_icon": "images/j_32.png",
         "default_popup": "manager.html"
     },
+    "icons": {
+      "128": "images/j_128.png",
+      "16": "images/j_16.png",
+      "32": "images/j_32.png",
+      "48": "images/j_48.png",
+      "64": "images/j_64.png"
+   },
+
     "background": {
         "scripts": ["js/jquery-1.7.1.js", "js/background.js"]
     },
     "content_scripts": [
         {
-            "matches": ["*://*.lufax.com/*"],
-            "js": ["js/jquery-1.7.1.js", "js/contentscript.js", "js/unionrsa.js"]
+            "matches": ["http://*/*", "https://*/*" ],
+            "js": ["js/jquery-1.7.1.js", "js/contentscript.js"]
         }
     ],
     "manifest_version": 2,
