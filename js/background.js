@@ -32,6 +32,13 @@ function searchDictionary(info){
 }
 chrome.contextMenus.create({title: "Cambridge Dictionary" , contexts:["selection"], onclick: searchDictionary});
 
+// add google translation for whole sentence
+function translateDictionary(info){
+    var searchstring = info.selectionText;
+    chrome.tabs.create({url: "https://translate.google.com.au/#view=home&op=translate&sl=en&tl=zh-CN&text=" + searchstring})
+}
+chrome.contextMenus.create({title: "Google Translate" , contexts:["selection"], onclick: translateDictionary});
+
 
 
 // function triggerExchange(triggerOrNot, curTab, param) {
